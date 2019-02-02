@@ -1,15 +1,21 @@
 import React from "react";
-import { AppRegistry, Image, View } from "react-native";
+import { AppRegistry, Text, View, StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  green: {
+    color: "green"
+  },
+  red: {
+    color: "red"
+  }
+});
 
 export default class App extends React.Component {
   render() {
-    let pic = {
-      uri:
-        "https://s3.caradvice.com.au/wp-content/uploads/2016/04/2016_mercedes-benz_gls_showroom2.jpg"
-    };
     return (
       <View>
-        <Image source={pic} style={{ width: 300, height: 150 }} />
+        <Text style={styles.red}>Red Text</Text>
+        <Text style={styles.green}>Green Text</Text>
       </View>
     );
   }
