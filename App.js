@@ -1,21 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { AppRegistry, Image, View } from "react-native";
 
 export default class App extends React.Component {
   render() {
+    let pic = {
+      uri:
+        "https://s3.caradvice.com.au/wp-content/uploads/2016/04/2016_mercedes-benz_gls_showroom2.jpg"
+    };
     return (
-      <View style={styles.container}>
-        <Text>Hello World!</Text>
+      <View>
+        <Image source={pic} style={{ width: 300, height: 150 }} />
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#999",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
