@@ -1,26 +1,16 @@
 import React from "react";
-import { AppRegistry, View, Text, TextInput } from "react-native";
+import { AppRegistry, View, Button, Alert } from "react-native";
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { text: "" };
-  }
-
   render() {
     return (
       <View style={{ padding: 10 }}>
-        <TextInput
-          style={{ height: 40 }}
-          placeholder="Type here to translate!"
-          onChangeText={text => this.setState({ text })}
+        <Button
+          onPress={() => {
+            Alert.alert("You tapped the button!");
+          }}
+          title="Press Me"
         />
-        <Text style={{ padding: 10, fontSize: 42 }}>
-          {this.state.text
-            .split(" ")
-            .map(word => word && "🍕")
-            .join(" ")}
-        </Text>
       </View>
     );
   }
