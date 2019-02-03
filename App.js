@@ -1,21 +1,17 @@
 import React from "react";
-import { AppRegistry, Text, View, StyleSheet } from "react-native";
-
-const styles = StyleSheet.create({
-  green: {
-    color: "green"
-  },
-  red: {
-    color: "red"
-  }
-});
+import { AppRegistry, View } from "react-native";
 
 export default class App extends React.Component {
   render() {
     return (
       <View>
-        <Text style={styles.red}>Red Text</Text>
-        <Text style={styles.green}>Green Text</Text>
+        <View
+          style={{ width: 50, height: 50, backgroundColor: "powderblue" }}
+        />
+        <View style={{ width: 100, height: 100, backgroundColor: "skyblue" }} />
+        <View
+          style={{ width: 150, height: 150, backgroundColor: "steelblue" }}
+        />
       </View>
     );
   }
